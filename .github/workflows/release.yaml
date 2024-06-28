@@ -45,7 +45,7 @@ jobs:
         cache: pip
         python-version: '3.9'
     - name: Set up QEMU
-      if: runner.os == 'Linux'
+      if: matrix.os == 'Linux'
       uses: docker/setup-qemu-action@v3
       with:
         platforms: arm64
